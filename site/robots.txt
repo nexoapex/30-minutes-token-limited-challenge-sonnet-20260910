@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /thanks.html
+Disallow: /downloads/
+
+# TODO before going live: replace SITE_URL with the real deployed origin.
+Sitemap: https://SITE_URL/sitemap.xml
