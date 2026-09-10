@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time-constrained AI agent experiment — Claude Sonnet, 10 Sept 2026</title>
+<meta name="description" content="Four parallel Claude Sonnet agents were given 40 minutes and an empty directory to build a monetizable product. They shipped it. Then a 13-agent audit said don't sell it.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="4 AI agents shipped a product in 40 minutes. Then 13 more said don't sell it.">
+<meta property="og:description" content="A time-constrained multi-agent experiment run on Claude Sonnet, 10 September 2026 — including the audit that killed the result.">
+<meta property="og:image" content="https://img.youtube.com/vi/kxl-lyMpJeE/maxresdefault.jpg">
+<meta property="og:url" content="https://nexoapex.github.io/30-minutes-token-limited-challenge-sonnet-20260910/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img.youtube.com/vi/kxl-lyMpJeE/maxresdefault.jpg">
+
+<link rel="icon" href="site/assets/favicon.svg" type="image/svg+xml">
+<style>
+  :root{
+    --bg:#0a0e14; --panel:#10161f; --border:#232b38;
+    --text:#e8edf5; --muted:#8b97a8; --faint:#5c6779;
+    --accent:#22d3aa; --danger:#ff6b6b;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.65;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent)}
+
+  .topline{height:3px;background:linear-gradient(90deg,var(--accent),rgba(34,211,170,.1))}
+
+  header{padding:64px 0 8px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;
+           letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .dot{width:9px;height:9px;border-radius:2px;background:var(--accent)}
+  h1{font-size:clamp(30px,5.4vw,46px);line-height:1.14;margin:20px 0 14px;letter-spacing:-.02em}
+  h1 em{font-style:normal;color:var(--accent)}
+  .standfirst{font-size:clamp(17px,2.3vw,20px);color:var(--muted);margin:0 0 26px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+  .chip{font-size:12.5px;color:var(--muted);border:1px solid var(--border);background:var(--panel);
+        padding:5px 11px;border-radius:100px;font-family:var(--mono)}
+
+  .video{margin:34px 0 10px;border:1px solid var(--border);border-radius:14px;overflow:hidden;
+         background:#000;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+  .ratio{position:relative;width:100%;aspect-ratio:16/9;max-width:100%}
+  .ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .caption{color:var(--faint);font-size:13.5px;margin:0 0 46px;text-align:center}
+
+  h2{font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);
+     margin:52px 0 16px;font-weight:700}
+  h3{font-size:19px;margin:30px 0 8px}
+  p{margin:0 0 16px}
+
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:22px 24px;margin:22px 0}
+  .card.warn{border-left:3px solid var(--danger)}
+  .card.good{border-left:3px solid var(--accent)}
+
+  ul{margin:0 0 16px;padding-left:20px}
+  li{margin-bottom:9px}
+  li::marker{color:var(--faint)}
+  code{font-family:var(--mono);font-size:.88em;background:#0d1219;border:1px solid var(--border);
+       padding:2px 6px;border-radius:5px;color:var(--accent)}
+  strong{color:#fff}
+
+  .verdict{font-size:clamp(19px,2.8vw,23px);line-height:1.45;color:var(--text);
+           border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:26px 0}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:22px 0}
+  .stat{background:var(--panel);border:1px solid var(--border);border-radius:11px;padding:16px 18px}
+  .stat b{display:block;font-size:26px;line-height:1.2;color:var(--accent);font-weight:700}
+  .stat span{font-size:13.5px;color:var(--muted)}
+
+  .cta{display:inline-block;background:var(--accent);color:#04120e;font-weight:650;
+       padding:12px 22px;border-radius:9px;text-decoration:none;margin:6px 10px 6px 0}
+  .cta.ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
+
+  footer{border-top:1px solid var(--border);margin-top:64px;padding:28px 0 60px;
+         color:var(--faint);font-size:13.5px}
+
+  @media(max-width:480px){
+    header{padding-top:40px}
+    .card{padding:18px}
+  }
+</style>
+</head>
+<body>
+<div class="topline"></div>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow"><span class="dot"></span> Experiment · 10 September 2026</span>
+  <h1>Four AI agents got 40 minutes to build a business. <em>Then an audit said don't sell it.</em></h1>
+  <p class="standfirst">A time-constrained multi-agent run on Claude Sonnet — and the follow-up
+     research phase that took the result apart.</p>
+  <div class="meta">
+    <span class="chip">Claude Sonnet</span>
+    <span class="chip">4 parallel sessions</span>
+    <span class="chip">&lt; 40 minutes</span>
+    <span class="chip">€0 spent</span>
+  </div>
+</header>
+
+<div class="video">
+  <div class="ratio">
+    <iframe src="https://www.youtube-nocookie.com/embed/kxl-lyMpJeE"
+            title="Time constraint Sonnet experiment 20260910 (desktop)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+  </div>
+</div>
+<p class="caption">Time constraint Sonnet experiment 20260910 (desktop) ·
+   <a href="https://youtu.be/kxl-lyMpJeE">watch on YouTube</a></p>
+
+<h2>The brief</h2>
+<p>Four parallel Claude Code sessions running <strong>Claude Sonnet</strong> were opened in one
+   shared, completely empty directory. All four received the same instruction: coordinate with
+   each other, pick the product topic yourselves, and build a production-ready, monetizable
+   product in under 40 minutes, at zero cost — spending nothing without explicit approval.</p>
+<p>No topic. No spec. No orchestrator. Role assignment and conflict resolution were left entirely
+   to the agents.</p>
+
+<h2>Phase 1 — The build</h2>
+<p>The agents discovered each other on the machine and negotiated roles by messaging directly:
+   one took git integration, one the landing page, one the product content, one the legal pages
+   and QA.</p>
+<p>It was not clean. Messages crossed in transit and <strong>three competing product ideas were
+   started simultaneously</strong> before they converged. One agent had to broadcast
+   <em>"FINAL correction — ignore my earlier message"</em> to halt work already underway on a
+   plan that no longer existed.</p>
+
+<div class="card good">
+  <h3 style="margin-top:0">What existed at the 40-minute mark</h3>
+  <ul>
+    <li>Static sales site — landing page, pricing, FAQ, thank-you/download page</li>
+    <li>Full legal pages — terms, privacy, refund</li>
+    <li>The product: <strong>"Skillpack"</strong>, $19 one-time — 8 prompt templates,
+        3 drop-in skills, 2 multi-agent workflow scripts, 2 settings snippets, packaged as a zip</li>
+    <li>Draft launch copy, social preview card, favicon, sitemap</li>
+  </ul>
+  <p style="margin-bottom:0">Constraints held exactly: nothing deployed, no domain purchased,
+     Stripe never activated (test placeholder only), zero money spent.</p>
+</div>
+
+<p>The unexpectedly valuable part was cross-review. Agents read each other's files and caught
+   bugs their authors missed — legal pages whose hardcoded colors silently overrode the site's
+   dark theme, and a download file placed outside the deploy folder that would have returned a
+   404 in production, immediately after someone paid.</p>
+
+<h2>Phase 2 — The audit that killed it</h2>
+<p>A second phase ran a <strong>13-agent research workflow on Claude Opus</strong> (~1.5M tokens):
+   competitor pricing, demand signals, distribution channels, a conversion audit, and one
+   deliberately adversarial agent whose only job was to argue the bear case.</p>
+
+<div class="grid">
+  <div class="stat"><b>8</b><span>comparable paid products found</span></div>
+  <div class="stat"><b>5</b><span>of them with zero ratings</span></div>
+  <div class="stat"><b>$57</b><span>earned by the closest case study</span></div>
+  <div class="stat"><b>0</b><span>units its $19 tier sold</span></div>
+</div>
+
+<div class="card warn">
+  <h3 style="margin-top:0">Verdict: do not sell this</h3>
+  <ul>
+    <li>The paid zip sat at a <strong>guessable public URL</strong> — anyone could skip checkout
+        and download it.</li>
+    <li>The "flagship" workflow script was essentially <strong>Anthropic's own bundled
+        documentation example with the variables renamed</strong>. Every target buyer already
+        has it, free.</li>
+    <li>Most of the pack duplicated free tooling already built into Claude Code
+        (<code>/code-review</code>, <code>/security-review</code>) and first-party plugins that
+        auto-install.</li>
+  </ul>
+  <p style="margin-bottom:0">The audit then proposed a substantially stronger alternative, built
+     on a product the owner already ships.</p>
+</div>
+
+<p class="verdict">The sprint produced a complete storefront for a product with no reason to exist.
+   "Production-ready" and "worth paying for" turn out to be unrelated properties — and only the
+   second one is hard.</p>
+
+<p>The negative finding was deliberately kept in the public repository README rather than quietly
+   deleted. It is the most useful output of the experiment.</p>
+
+<h2>Everything is public</h2>
+<p>The full repo contains the site, the legal pages, the product files, and the README section
+   carrying the verdict. Nothing was ever deployed and no payment link was ever live, so there is
+   nothing to buy.</p>
+<p>
+  <a class="cta" href="https://github.com/nexoapex/30-minutes-token-limited-challenge-sonnet-20260910">View the repository</a>
+  <a class="cta ghost" href="https://youtu.be/kxl-lyMpJeE">Watch on YouTube</a>
+</p>
+
+<div class="card">
+  <p style="margin-bottom:0"><strong>One caveat.</strong> This is one run, on one day, with one
+     brief — a field report, not a benchmark. If you reproduce it, the coordination chaos is the
+     part to expect again.</p>
+</div>
+
+<footer>
+  <div class="wrap" style="padding:0">
+    Built and audited by AI agents · Experiment run 10 September 2026 ·
+    <a href="https://github.com/nexoapex/30-minutes-token-limited-challenge-sonnet-20260910">nexoapex</a><br>
+    Not affiliated with Anthropic. Claude and Claude Code are trademarks of their respective owner.
+  </div>
+</footer>
+</div>
+</body>
+</html>

@@ -12,7 +12,16 @@ including converging after three competing product ideas were started in paralle
 Everything in this repo was produced inside that window. Nothing was deployed, no
 domain was bought, no payment processor was activated, and no money was spent.
 
-📹 **Video: _Time constraint Sonnet experiment 20260910 (desktop)_** — link to be added here.
+## 📹 Watch the run
+
+**Time constraint Sonnet experiment 20260910 (desktop)** — the full session, both phases.
+
+[![Time constraint Sonnet experiment 20260910](https://img.youtube.com/vi/kxl-lyMpJeE/maxresdefault.jpg)](https://youtu.be/kxl-lyMpJeE)
+
+▶️ **https://youtu.be/kxl-lyMpJeE**
+
+There is also a companion page with the video embedded:
+**https://nexoapex.github.io/30-minutes-token-limited-challenge-sonnet-20260910/**
 
 A follow-up phase, run afterwards on Claude Opus with a 13-agent research workflow,
 audited the result and reached a blunt conclusion — see
