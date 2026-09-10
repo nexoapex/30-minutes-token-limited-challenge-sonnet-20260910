@@ -21,6 +21,41 @@ Per explicit confirmation from the owner (relayed independently by multiple sess
   MVP staged locally. Deploying (even to the free subdomain) is a visible,
   hard-to-fully-reverse action, so it waits for an explicit go-ahead.
 
+## Blocking issues — do NOT sell this as-is
+
+A 13-agent web-grounded market review (2026-09-10) surfaced three verified blockers.
+All three were confirmed against primary sources or this repo's own files, not assumed.
+
+1. **The paid file is free to anyone.** `site/downloads/pack.zip` is a static asset
+   at a guessable path. Anyone can skip checkout and download it. On a static host
+   this is unfixable by config — the real fix is to stop self-hosting the file and
+   let the payment processor gate delivery (Stripe's own post-purchase file
+   delivery, or Gumroad/Lemon Squeezy which handle entitlement), or put a Pages
+   Function with a signed token in front of it.
+
+2. **The flagship workflow is Anthropic's own documentation example.**
+   `content/workflows/parallel-code-review.js` reuses the worked example from the
+   `workflow-authoring` skill that ships inside Claude Code — same `DIMENSIONS`,
+   `FINDINGS_SCHEMA`, `VERDICT_SCHEMA` identifiers, same structure, and the
+   refuter prompt ("Default to refuted=true if uncertain") near-verbatim. Every
+   target buyer has this file on their own machine for free. Selling it is both a
+   credibility risk and a licensing question, and the NexoApex name is reused
+   across David's other projects.
+
+3. **Most of the pack duplicates free, already-installed first-party tooling.**
+   `/code-review`, `/security-review` and `/simplify` are built-in Claude Code
+   commands; Anthropic auto-adds its official plugin marketplace (commit-commands,
+   pr-review-toolkit, security-guidance) on first launch. A competitor gives away
+   50+ overlapping Claude Code prompts for €0. `anthropics/skills` has ~175k stars.
+
+Also unresolved: the Stripe link is still `test_PLACEHOLDER` and `terms.html`
+still contains `[Your Jurisdiction]`.
+
+**Recommendation on record:** do not launch this at $19. Either publish it free as
+a public repo / community-marketplace plugin to build the audience that does not
+yet exist, or rewrite the contents around the parts with no free equivalent. See
+the session synthesis for the alternative product that scored far higher.
+
 ## Layout
 
 - `site/` — the static site (deploy root). `index.html`, `styles.css`, landing/sales

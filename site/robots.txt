@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
 Disallow: /thanks.html
-Disallow: /downloads/
+
+# NOTE: /downloads/pack.zip is deliberately NOT listed here. Listing it would
+# advertise the exact path of the paid file. On a static host the file is
+# publicly readable regardless, so robots.txt is not a control — see the
+# "Blocking issues" section of the repo README for the real fix.
 
 # TODO before going live: replace SITE_URL with the real deployed origin.
 Sitemap: https://SITE_URL/sitemap.xml
