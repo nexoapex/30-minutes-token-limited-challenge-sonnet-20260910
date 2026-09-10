@@ -1,8 +1,32 @@
-# Template/Prompt Pack for Claude Code Users (working name)
+# Time-constrained AI agent experiment — Claude Sonnet, 10 September 2026
 
-A small digital product: a curated pack of prompts, skill templates, and workflow
-scripts for people using Claude Code / coding agents day to day. Sold as a one-time
-purchase, delivered as a downloadable zip.
+**This repository is the artifact of an experiment, not a live product.**
+
+On **10 September 2026**, four parallel **Claude Sonnet** (Claude Code) sessions were
+given a single brief: coordinate with each other and build a production-ready,
+monetizable product from an empty directory, in under 40 minutes, at zero cost, with
+no spending permitted without the owner's explicit approval. The sessions had to pick
+the product idea themselves, split the work, and resolve their own conflicts —
+including converging after three competing product ideas were started in parallel.
+
+Everything in this repo was produced inside that window. Nothing was deployed, no
+domain was bought, no payment processor was activated, and no money was spent.
+
+📹 **Video: _Time constraint Sonnet experiment 20260910 (desktop)_** — link to be added here.
+
+A follow-up phase, run afterwards on Claude Opus with a 13-agent research workflow,
+audited the result and reached a blunt conclusion — see
+[Blocking issues](#blocking-issues--do-not-sell-this-as-is) below. The negative
+finding is kept in this README deliberately: it is the most useful output of the
+experiment.
+
+---
+
+## What was built
+
+A small digital product ("Skillpack"): a curated pack of prompts, skill templates, and
+workflow scripts for people using Claude Code / coding agents day to day. Intended as a
+one-time purchase, delivered as a downloadable zip.
 
 Built collaboratively across 4 parallel Claude Code sessions (this one as git
 integrator) on 2026-09-10, per owner instructions: minimum cost, no spend without
