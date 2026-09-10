@@ -1,0 +1,16 @@
+{
+  "_comment": "Example PreToolUse hook that blocks commits containing likely secrets before they're made. Adapt the grep pattern to your own secret formats and merge into your own .claude/settings.json 'hooks' section.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -qE '^git commit' && git diff --cached | grep -qEi '(api[_-]?key|secret|password|token)\\s*[:=]\\s*[\"'\\''][A-Za-z0-9_\\-]{16,}'; then echo 'Blocked: possible secret in staged changes' >&2; exit 1; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

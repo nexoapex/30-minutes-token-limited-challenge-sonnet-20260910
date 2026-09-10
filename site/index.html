@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skillpack — Prompts, Skills &amp; Workflows for Claude Code</title>
+<meta name="description" content="A one-time-purchase pack of battle-tested prompt templates, drop-in skills, and multi-agent workflow scripts for people using Claude Code every day.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--
+  TODO before going live: replace the placeholder Stripe Payment Link below
+  (search "PLACEHOLDER") with a real test-mode link from the Stripe dashboard,
+  then a live one when the owner explicitly says go. See repo README.
+-->
+
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="#top">Skillpack</a>
+    <nav>
+      <a href="#whats-inside">What&rsquo;s inside</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="container">
+    <span class="eyebrow">For developers using Claude Code</span>
+    <h1>Stop rewriting the same prompts every week.</h1>
+    <p class="lead">
+      A curated pack of prompt templates, drop-in skills, and multi-agent
+      workflow scripts for the tasks you repeat constantly &mdash; code review,
+      root-causing bugs, safe refactors, and more.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#pricing">Get the pack &mdash; $19</a>
+      <a class="btn-secondary" href="#whats-inside">See what&rsquo;s inside</a>
+    </div>
+    <p class="trust-note">One-time payment &middot; instant download &middot; no subscription</p>
+  </div>
+</section>
+
+<section class="features container" id="whats-inside">
+  <div class="feature-card">
+    <span class="count">8</span>
+    <h3>Prompt templates</h3>
+    <p>Copy-paste prompts for code review, root-causing bugs, safe refactors, PR descriptions, commit messages, security review, edge-case tests, and architecture decisions.</p>
+  </div>
+  <div class="feature-card">
+    <span class="count">3</span>
+    <h3>Drop-in skills</h3>
+    <p>Ready-made Skill folders &mdash; drop them into <code>.claude/skills/</code> and Claude Code picks them up automatically on the right task.</p>
+  </div>
+  <div class="feature-card">
+    <span class="count">2</span>
+    <h3>Workflow scripts</h3>
+    <p>Multi-agent Workflow tool scripts: parallel code review with adversarial verification, and a multi-modal research-and-synthesis pipeline.</p>
+  </div>
+</section>
+<p class="bonus-note">Plus a starter safe-command allowlist and an example pre-commit hook.</p>
+
+<section class="sample">
+  <div class="container">
+    <h2>A real sample from the pack</h2>
+    <p class="sample-sub">The code-review prompt, in full:</p>
+    <pre><code>Review the changes in [DIFF / PR #NNN / file paths] for:
+
+1. Correctness &mdash; logic errors, off-by-one, wrong operator, unhandled
+   edge case, race conditions, null/undefined paths that aren't actually
+   impossible.
+2. Reuse &amp; simplification &mdash; duplicated logic that already exists
+   elsewhere, over-engineered abstractions for a one-off need, dead code.
+3. Efficiency &mdash; unnecessary loops/allocations, N+1 queries, blocking
+   calls on a hot path.
+4. Security &mdash; injection, unsafe deserialization, secrets in code,
+   missing authz checks on new endpoints.
+
+Rules:
+- Only report issues you can point to a concrete failure scenario for.
+- Rank findings most-severe first.
+- If nothing is wrong, say so.</code></pre>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2>Simple, one-time pricing</h2>
+    <div class="plan">
+      <div class="plan-name">Skillpack</div>
+      <div class="price">$19 <small>one time</small></div>
+      <ul>
+        <li>8 prompt templates</li>
+        <li>3 drop-in skills</li>
+        <li>2 workflow scripts</li>
+        <li>Starter settings &amp; pre-commit hook</li>
+        <li>Personal or commercial use</li>
+        <li>Instant download after purchase</li>
+      </ul>
+      <a class="btn-primary" href="https://buy.stripe.com/test_PLACEHOLDER">Buy now &mdash; $19</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <h2>Frequently asked questions</h2>
+  <details>
+    <summary>Is this affiliated with Anthropic or Claude?</summary>
+    <p>No. Skillpack is an independently created, unaffiliated product. &ldquo;Claude Code&rdquo; is referenced only to describe compatibility.</p>
+  </details>
+  <details>
+    <summary>What format are the files?</summary>
+    <p>Plain Markdown, JS, and JSON &mdash; no proprietary formats, no lock-in, nothing that phones home.</p>
+  </details>
+  <details>
+    <summary>Can I use this on commercial projects?</summary>
+    <p>Yes &mdash; personal and commercial use is included. Reselling or redistributing the pack itself isn&rsquo;t allowed. See our <a href="legal/terms.html">Terms</a>.</p>
+  </details>
+  <details>
+    <summary>What if it&rsquo;s not for me?</summary>
+    <p>See our <a href="legal/refund.html">Refund Policy</a>.</p>
+  </details>
+</section>
+
+<footer>
+  <div class="container">
+    <span class="footer-brand">&copy; 2026 NexoApex. Not affiliated with Anthropic.</span>
+    <ul class="footer-links">
+      <li><a href="legal/terms.html">Terms</a></li>
+      <li><a href="legal/privacy.html">Privacy</a></li>
+      <li><a href="legal/refund.html">Refunds</a></li>
+      <li><a href="mailto:david@nexoapex.com">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "_comment": "Starter allowlist of common READ-ONLY bash commands. Review every entry before trusting it in your own environment — merge the 'permissions.allow' array into your own .claude/settings.json rather than overwriting it wholesale.",
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch)",
+      "Bash(git show:*)",
+      "Bash(ls)",
+      "Bash(ls:*)",
+      "Bash(pwd)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(npm test)",
+      "Bash(npm run test:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run build)"
+    ]
+  }
+}
