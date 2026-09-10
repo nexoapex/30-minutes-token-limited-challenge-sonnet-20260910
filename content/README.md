@@ -1,4 +1,4 @@
-# Agent Ops Pack — Prompts, Skills & Workflows for Claude Code
+# Skillpack — Prompts, Skills & Workflows for Claude Code
 
 A curated set of battle-tested prompt templates, drop-in skills, and multi-agent
 workflow scripts for developers using Claude Code day to day. Everything here
